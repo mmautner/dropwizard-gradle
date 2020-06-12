@@ -7,6 +7,12 @@ import javax.ws.rs.QueryParam;
 @Path("/")
 public class Resource {
     @GET
+    @Path("/")
+    public String index() {
+        return "index";
+    }
+
+    @GET
     @Path("/hello")
     public String hello() {
         return "Hello";

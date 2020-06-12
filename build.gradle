@@ -23,3 +23,6 @@ shadowJar {
         attributes 'Main-Class': 'DropwizardExampleApplication'
     }
 }
+
+task stage(dependsOn: ['shadowJar', 'clean'])
+shadowJar.mustRunAfter clean
